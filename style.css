@@ -1,0 +1,112 @@
+/* Body */
+body {
+    background: url(/assets/images/background-pattern-desktop.svg);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0px;
+}
+
+body::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 40%; 
+    left: 0;
+    width: 100%;
+    height: 60%; 
+    background-color: #F9EEFF; 
+    z-index: -1;
+}
+
+/* Card Section*/
+.card {
+    background-color: #fff;
+    border-radius: 15px;
+    width: 550px;
+    height: auto;
+    padding: 30px;
+}
+
+.card .faq h1 {
+    display: inline-block;
+    font-family: WS;
+    font-size: 50px;
+    margin: 0 0 0 20px;
+}
+
+.faq {
+    display: flex;
+}
+
+/* Accordion Section */
+button {
+    background-color: transparent;
+    border: 0;
+}
+
+.accordion {
+    cursor: pointer;
+    text-align: left;
+    font-size: 16px;
+    transition: .4s;
+    width: 100%;
+}
+
+.accordion h3 {
+    display: flex;
+    align-items: center;
+    font-family: WS-Bold;
+}
+
+.active .accordion:hover {
+    background-color: #9c9c9c;
+}
+
+.accordion.active {
+    padding: 0;
+}
+
+.accordion-body .accordion h3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.accordion-body .accordion h3::after {
+    content: url(/assets/images/icon-plus.svg);
+    width: 30px;
+    height: 30px;
+}
+
+.accordion-body .accordion.active h3::after {
+    content: url(/assets/images/icon-minus.svg);
+    width: 30px;
+    height: 30px;
+}
+
+.panel {
+    display: none;
+    overflow: hidden;
+    color: #8b8b8b;
+}
+
+.panel p {
+    margin: 0 0 16px 0;
+    font-family: WS-Regular;
+}
+
+.line {
+    width: 100%;
+    margin-left: 0;
+    border: 1px solid rgb(228, 228, 228);
+}
+
+/* Responsive */
+@media (max-width: 640px){
+    .card{
+        width: 300px;
+    }
+}

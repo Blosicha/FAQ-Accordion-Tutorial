@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="/style.css">
+
+  <style>
+    @font-face {
+      font-family: WS;
+      src: url(/assets/fonts/WorkSans-VariableFont_wght.ttf);
+    }
+
+    @font-face {
+      font-family: WS-Bold;
+      src: url(/assets/fonts/static/WorkSans-Bold.ttf);
+    }
+
+    @font-face {
+      font-family: WS-Regular;
+      src: url(/assets/fonts/static/WorkSans-Regular.ttf);
+    }
+  </style>
+
+  <title>Frontend Mentor | FAQ accordion</title>
+
+</head>
+
+<body>
+  <div class="card">
+    <div class="faq">
+      <img src="/assets/images/icon-star.svg" class="star-icon" alt="Star Icon">
+      <h1>FAQs</h1>
+    </div>
+    <div class="accordion-body">
+      <button class="accordion">
+        <h3>What is Frontend Mentor, and how will it help me?</h3>
+      </button>
+      <div class="panel">
+        <p>Frontend Mentor offers realistic coding challenges to help<br> developers improve their frontend coding
+          skills
+          with projects in<br> HTML, CSS and JavaScript. It's suitable for all levels and ideal for<br> portfolio
+          building</p>
+      </div>
+      <div class="line"></div>
+      <button class="accordion">
+        <h3>Is Frontend mentor free?</h3>
+      </button>
+      <div class="panel">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, aliquid.</p>
+      </div>
+      <div class="line"></div>
+      <button class="accordion">
+        <h3>Can I use Frontend Mentor projects in my portfolio?</h3>
+      </button>
+      <div class="panel">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id esse unde, laudantium a ipsam aspernatur
+          aliquid
+          placeat! Numquam, officia iusto similique perspiciatis fuga perferendis totam.</p>
+      </div>
+      <div class="line"></div>
+      <button class="accordion">
+        <h3>How can I get help if I'm stuck on a challenge?</h3>
+      </button>
+      <div class="panel">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo atque quidem animi repellendus ducimus
+          ea,
+          dolorem tempora ad sed facere veritatis totam nisi voluptates quam ullam delectus veniam voluptatum
+          expedita?
+          Tenetur blanditiis magni neque molestias sequi enim veniam adipisci non necessitatibus ad. Deleniti
+          rerum
+          expedita aliquam iure, ipsum aut error in ipsam fuga consectetur, accusamus molestiae sint? Doloremque,
+          deleniti voluptate!</p>
+      </div>
+      <div class="line"></div>
+    </div>
+  </div>
+
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+  </script>
+
+</body>
+
+</html>
